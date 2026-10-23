@@ -47,5 +47,4 @@ src/
 
 Em `src/pages/Home.tsx`:
 
-- Confirmar o e-mail de contato (hoje `contato@gei.com.br`).
 - O botão "Landing page" hoje só volta ao topo (`#inicio`). Trocar se houver uma URL externa.
