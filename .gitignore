@@ -1,0 +1,23 @@
+# Dependências
+node_modules/
+.pnpm-store/
+
+# Build
+dist/
+
+# Variáveis de ambiente
+.env
+.env.*
+!.env.example
+
+# Editor / SO
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log
+
+# Claude Code
+.claude/
