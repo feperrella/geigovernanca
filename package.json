@@ -8,7 +8,8 @@
     "build": "vite build",
     "preview": "vite preview",
     "check": "tsc --noEmit",
-    "format": "prettier --write ."
+    "format": "prettier --write .",
+    "start": "vite preview --host 0.0.0.0 --port ${PORT:-3000}"
   },
   "dependencies": {
     "lucide-react": "^0.453.0",
@@ -29,11 +30,5 @@
   },
   "engines": {
     "node": ">=20"
-  },
-  "packageManager": "pnpm@10.15.1",
-  "pnpm": {
-    "onlyBuiltDependencies": [
-      "esbuild"
-    ]
   }
 }

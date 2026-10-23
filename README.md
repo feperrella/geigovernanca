@@ -5,29 +5,31 @@ Feito em React 19, Vite 7 e Tailwind CSS 4. É um site 100% estático: não tem 
 
 ## Requisitos
 
-- Node.js 20 ou superior
-- pnpm 10 (`corepack enable` já ativa a versão certa)
+- Bun 1.x (ou Node.js 20+)
 
 ## Desenvolvimento
 
 ```bash
-pnpm install
-pnpm dev        # servidor local com hot reload
-pnpm check      # checagem de tipos (TypeScript)
-pnpm build      # gera a versão de produção em dist/
-pnpm preview    # serve o dist/ localmente para conferência
+bun install
+bun run dev        # servidor local com hot reload
+bun run check      # checagem de tipos (TypeScript)
+bun run build      # gera a versão de produção em dist/
+bun run start      # serve o dist/ na porta $PORT (padrão 3000)
 ```
 
-## Publicação (hospedagem)
+## Publicação (UQBITZ)
 
-| Configuração       | Valor                          |
-| ------------------ | ------------------------------ |
-| Instalação         | `pnpm install --frozen-lockfile` |
-| Comando de build   | `pnpm build`                   |
-| Pasta publicada    | `dist`                         |
-| Versão do Node     | 20+ (ver `.nvmrc`)             |
+Deploy automático a cada push no branch `main`.
 
-O conteúdo de `dist/` é só HTML, CSS, JS e imagens. Pode ser servido por qualquer servidor de arquivos estáticos (Nginx, Apache, CDN), sem processo Node rodando.
+| Campo            | Valor           |
+| ---------------- | --------------- |
+| Install command  | `bun install`   |
+| Build command    | `bun run build` |
+| Start command    | `bun run start` |
+| Root directory   | `/` (raiz)      |
+| Output directory | `dist`          |
+
+O conteúdo de `dist/` é só HTML, CSS, JS e imagens. Se a plataforma servir o `dist` como estático, o start command não é necessário.
 
 ## Estrutura
 
@@ -46,5 +48,4 @@ src/
 Em `src/pages/Home.tsx`:
 
 - Confirmar o e-mail de contato (hoje `contato@gei.com.br`).
-- Colocar o número no link do WhatsApp (hoje `https://wa.me/?text=...` não tem número de destino).
 - O botão "Landing page" hoje só volta ao topo (`#inicio`). Trocar se houver uma URL externa.

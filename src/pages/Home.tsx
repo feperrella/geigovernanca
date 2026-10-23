@@ -29,7 +29,7 @@ export default function Home() {
   const visibleFaqs = activeCategory === "Todas" ? faqs : faqs.filter((faq) => faq.category === activeCategory);
   const closeMenu = () => setMenuOpen(false);
   const email = "contato@gei.com.br";
-  const whatsapp = "https://wa.me/?text=Olá%2C%20quero%20conhecer%20a%20GEI%20-%20Governança%20Estrutural%20Integrada.";
+  const whatsapp = "https://wa.me/5511963000538?text=Olá%2C%20quero%20conhecer%20a%20GEI%20-%20Governança%20Estrutural%20Integrada.";
 
   return (
     <div className="min-h-screen overflow-x-hidden bg-white text-[#113f74]">
